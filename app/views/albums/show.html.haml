@@ -9,8 +9,6 @@
 %p
   %b Release date:
   = @album.release_date
-  
-%p= link_to t('.add_song'), new_song_path(album_id: @album)
 
 = link_to t('.edit_album'), edit_album_path(@album)
 \|
@@ -35,3 +33,6 @@
       %td= link_to t('.show_song'), song
       %td= link_to t('.edit_song'), edit_song_path(song)
       %td= link_to t('.delete_song'), song, :method => :delete, :data => { :confirm => t('.delete_confirm')}
+%br
+= link_to new_song_path(album_id: @album), {:class => "button"} do
+  %div{:class => "button"}= t('.add_song')

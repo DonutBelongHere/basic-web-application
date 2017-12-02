@@ -1,6 +1,8 @@
+$headercolor: #010c30;
 body {
   table {
-    width: 100%;
+    width: 75%;
+    margin: auto;
   }
   
   th {
@@ -22,6 +24,10 @@ body {
     padding: 5px;
     border-bottom: 1px solid #ddd;
   }
+}
+
+h3{
+  text-align: center;
 }
 
 p, ol, ul, td {

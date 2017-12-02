@@ -12,9 +12,7 @@
 %p
   %b Length:
   = @song.length
-
-%p= link_to t('.add_review'), new_review_path(song_id: @song)
-
+  
 = link_to t('.edit_song'), edit_song_path(@song)
 \|
 = link_to t('.back'), albums_path
@@ -36,3 +34,6 @@
       %td= review.review
       %td= link_to t('.edit_review'), edit_review_path(review)
       %td= link_to t('.delete_review'), review, :method => :delete, :data => { :confirm => t('.delete_confirm')}
+%br
+= link_to new_review_path(song_id: @song), {:class => "button"} do
+  %div{:class => "button"}= t('.add_review')

@@ -21,4 +21,5 @@
 
 %br
 
-= link_to t('.new_album'), new_album_path
+= link_to new_album_path, {:class => "button"} do
+  %div{:class => "button"}= t('.new_album')
