@@ -13,10 +13,19 @@
  *= require_tree .
  *= require_self
  */
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-body {
-    background-color: #ceeac9;
+ /* Global Styles */
+ 
+$background: #d1e1ff;
+$apptitlecolor: #010c30;
+
+h1 {
+    text-align: center;
+    padding: 0px 0px 12px 0px;
+    color: $apptitlecolor;
+}
+body{
+    background-color: $background;
 }

@@ -1,6 +1,14 @@
 // Place all the styles related to the Home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/* Home Styles */
+
+$navbarcolor: #010c30;
+$navtextcolor: #d1e1ff;
+$navhovercolor: #2f3855;
+$textcolor: #454b66;
+
 form label, form input {
     display: block;
 }
@@ -9,30 +17,35 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: $navbarcolor;
 }
 li {
     float: left;
-    color: #ffffff;
-}
-li a {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    
-    &:visited {
-        color: #ffffff;
-    }
-    
-    &:hover {
-        background-color: #111;
-        color: #ffffff;
+    color: $navtextcolor;
+    a {
+        display: block;
+        color: $navtextcolor;
+        text-align: center;
+        padding: 14px 16px;
         text-decoration: none;
+        
+        &:visited {
+            color: $navtextcolor;
+        }
+        
+        &:hover {
+            background-color: $navhovercolor;
+            color: $navtextcolor;
+            text-decoration: none;
+        }
     }
 }
-h1 {
+p {
+    color: $textcolor;
+    width: 100%;
+    padding: 5px;
+}
+p.footer {
+    border-top: 1px solid;
     text-align: center;
-    padding: 0px 0px 12px 0px;
 }
