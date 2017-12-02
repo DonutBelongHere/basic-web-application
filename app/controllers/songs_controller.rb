@@ -1,6 +1,7 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
-
+  before_action :set_album, only: [:new, :create]
+  
   # GET /songs
   # GET /songs.json
   def index
@@ -14,7 +15,7 @@ class SongsController < ApplicationController
 
   # GET /songs/new
   def new
-    @song = Song.new
+    @song = @album.songs.new
   end
 
   # GET /songs/1/edit
@@ -24,7 +25,7 @@ class SongsController < ApplicationController
   # POST /songs
   # POST /songs.json
   def create
-    @song = Song.new(song_params)
+    @song = @album.songs.new(song_params)
 
     respond_to do |format|
       if @song.save
@@ -65,6 +66,10 @@ class SongsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_song
       @song = Song.find(params[:id])
+    end
+    
+    def set_album
+      @album = Album.find_by(id: params[:album_id]) || Album.find(song_params[:album_id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

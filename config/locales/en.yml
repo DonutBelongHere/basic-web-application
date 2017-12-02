@@ -46,3 +46,12 @@ en:
     request_contact: #request contact action
       no_email: Please enter an email!
       email_sent: Thank you! Your message has been sent.
+      
+  albums:
+    albums:
+      add_song: Add Song
+      edit_album: Edit Album
+      back: Back
+      edit_song: Edit Song
+      delete_song: Delete Song
+      delete_confirm: Are you sure you want to delete this song?
