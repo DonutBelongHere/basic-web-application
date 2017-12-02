@@ -20,9 +20,9 @@
 %table
   %tbody
   - @album.songs.each do |song|
-  %tr 
-    %td= song.song_title
-    %td= song.genre
-    %td= song.length
-    %td= link_to t('.edit_song'), edit_song_path(song)
-    %td= link_to t('.delete_song'), song, :method => :delete, :data => { :confirm => t('.delete_confirm')}
+    %tr 
+      %td= song.song_title
+      %td= song.genre
+      %td= song.length
+      %td= link_to t('.edit_song'), edit_song_path(song)
+      %td= link_to t('.delete_song'), song, :method => :delete, :data => { :confirm => t('.delete_confirm')}

@@ -67,13 +67,13 @@ class SongsController < ApplicationController
     def set_song
       @song = Song.find(params[:id])
     end
-    
-    def set_album
-      @album = Album.find_by(id: params[:album_id]) || Album.find(song_params[:album_id])
-    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def song_params
       params.require(:song).permit(:album_id, :song_title, :genre, :length)
+    end
+    
+    def set_album
+      @album = Album.find_by(id: params[:album_id]) || Album.find(song_params[:album_id])
     end
 end
