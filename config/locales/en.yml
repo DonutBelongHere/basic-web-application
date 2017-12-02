@@ -33,3 +33,16 @@ en:
     contact: #contact view
       contact_us: Contact Us
       contact_msg: Please fill out the form to get in touch.
+      name: "Name:"
+      enter_name: Enter your name
+      email: "Email:"
+      enter_email: Enter your email address
+      mobile: "Mobile Number:"
+      enter_mobile: Enter your mobile number
+      message: "Message:"
+      enter_message: Let us know what you want to say!
+      submit: Submit
+      
+    request_contact: #request contact action
+      no_email: Please enter an email!
+      email_sent: Thank you! Your message has been sent.

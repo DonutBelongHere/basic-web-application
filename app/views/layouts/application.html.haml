@@ -15,6 +15,8 @@
     = csrf_meta_tags
     
   %body
+    - flash.each do |key, value|
+      = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
   
     = render 'shared/header.html.haml'
     = yield
