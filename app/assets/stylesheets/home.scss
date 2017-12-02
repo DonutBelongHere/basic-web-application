@@ -4,3 +4,35 @@
 form label, form input {
     display: block;
 }
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+    color: #ffffff;
+}
+li a {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    
+    &:visited {
+        color: #ffffff;
+    }
+    
+    &:hover {
+        background-color: #111;
+        color: #ffffff;
+        text-decoration: none;
+    }
+}
+h1 {
+    text-align: center;
+    padding: 0px 0px 12px 0px;
+}

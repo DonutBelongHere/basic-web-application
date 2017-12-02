@@ -18,6 +18,13 @@
 
 %p Songs:
 %table
+  %thead
+    %tr
+      %th Title
+      %th Genre
+      %th Length (nearest minute)
+      %th
+      %th
   %tbody
   - @album.songs.each do |song|
     %tr 

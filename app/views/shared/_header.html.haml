@@ -1,6 +1,6 @@
 %header
     %h1= t('app_title')
-    %p
-        = link_to "Home", root_path 
-        = link_to "Albums", albums_path
-        = link_to "Contact", contact_path
+    %ul
+        %li= link_to "Home", root_path 
+        %li= link_to "Albums", albums_path
+        %li{:style => "float:right"}= link_to "Contact", contact_path

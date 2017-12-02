@@ -48,7 +48,7 @@ en:
       email_sent: Thank you! Your message has been sent.
       
   albums:
-    albums:
+    show:
       add_song: Add Song
       edit_album: Edit Album
       back: Back
