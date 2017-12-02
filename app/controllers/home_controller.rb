@@ -15,7 +15,7 @@ class HomeController < ApplicationController
       flash[:alert] = I18n.t('home.request_contact.no_email')
       redirect_to contact_path
     else
-      # send email
+      ContactMailer.contact_email(email, name, mobile, message).deliver_now
       flash[:notice] = I18n.t('home.request_contact.email_sent')
       redirect_to root_path
     end
