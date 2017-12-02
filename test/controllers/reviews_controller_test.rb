@@ -3,6 +3,7 @@ require 'test_helper'
 class ReviewsControllerTest < ActionController::TestCase
   setup do
     @review = reviews(:one)
+    @song = songs(:one)
   end
 
   test "should get index" do
@@ -12,7 +13,7 @@ class ReviewsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get :new, song_id: @song
     assert_response :success
   end
 

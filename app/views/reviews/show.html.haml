@@ -2,7 +2,7 @@
 
 %p
   %b Song:
-  = @review.song
+  = @review.song.song_title
 %p
   %b Reviewer:
   = @review.reviewer
@@ -13,6 +13,6 @@
   %b Review:
   = @review.review
 
-= link_to 'Edit', edit_review_path(@review)
+= link_to t('.edit_review'), edit_review_path(@review)
 \|
-= link_to 'Back', reviews_path
+= link_to t('.back'), songs_path(@song)

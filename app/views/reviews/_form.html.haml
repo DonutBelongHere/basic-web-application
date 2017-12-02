@@ -8,7 +8,8 @@
 
   .field
     = f.label :song
-    = f.text_field :song
+    %p= @review.song.song_title
+    = f.hidden_field :song_id, value: @review.song.id
   .field
     = f.label :reviewer
     = f.text_field :reviewer

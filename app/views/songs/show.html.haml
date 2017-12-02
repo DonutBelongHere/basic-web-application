@@ -13,6 +13,27 @@
   %b Length:
   = @song.length
 
-= link_to 'Edit', edit_song_path(@song)
+%p= link_to t('.add_review'), new_review_path(song_id: @song)
+
+= link_to t('.edit_song'), edit_song_path(@song)
 \|
-= link_to 'Back', albums_path(@album)
+= link_to t('.back'), albums_path(@album)
+
+%p Ratings:
+%table
+  %thead
+    %tr
+      %th Reviewer
+      %th Rating (out of 5)
+      %th Review
+      %th
+      %th
+  %tbody
+  - @song.reviews.each do |review|
+    %tr 
+      %td= review.reviewer
+      %td= review.rating
+      %td= review.review
+      %td= link_to t('show_review'), review
+      %td= link_to t('.edit_review'), edit_review_path(review)
+      %td= link_to t('.delete_review'), review, :method => :delete, :data => { :confirm => t('.delete_confirm')}
