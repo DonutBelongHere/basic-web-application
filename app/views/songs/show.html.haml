@@ -24,8 +24,7 @@
       %th Reviewer
       %th Rating (out of 5)
       %th Review
-      %th
-      %th
+      %th{:colspan => "2"}= 'Actions'
   %tbody
   - @song.reviews.each do |review|
     %tr 
@@ -35,5 +34,4 @@
       %td= link_to t('.edit_review'), edit_review_path(review)
       %td= link_to t('.delete_review'), review, :method => :delete, :data => { :confirm => t('.delete_confirm')}
 %br
-= link_to new_review_path(song_id: @song), {:class => "button"} do
-  %div{:class => "button"}= t('.add_review')
+%div{:class => "button"}= link_to t('.add_review'), new_review_path(song_id: @song)

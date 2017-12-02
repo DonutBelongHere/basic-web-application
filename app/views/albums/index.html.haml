@@ -2,12 +2,10 @@
 %table
   %thead
     %tr
-      %th Album title
-      %th Album artist
-      %th Release date
-      %th
-      %th
-      %th
+      %th Album Title
+      %th Album Artist
+      %th Release Date
+      %th{:colspan => "3"}= 'Actions'
 
   %tbody
     - @albums.each do |album|
@@ -21,5 +19,4 @@
 
 %br
 
-= link_to new_album_path, {:class => "button"} do
-  %div{:class => "button"}= t('.new_album')
+%div{:class => "button"}= link_to t('.new_album'), new_album_path
