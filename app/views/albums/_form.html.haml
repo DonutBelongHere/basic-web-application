@@ -1,0 +1,19 @@
+= form_for @album do |f|
+  - if @album.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@album.errors.count, "error")} prohibited this album from being saved:"
+      %ul
+        - @album.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.label :album_title
+    = f.text_field :album_title
+  .field
+    = f.label :album_artist
+    = f.text_field :album_artist
+  .field
+    = f.label :release_date
+    = f.date_select :release_date
+  .actions
+    = f.submit 'Save'

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :albums
   root 'home#home'
   get '/contact' => 'home#contact'
   post '/request_contact' => 'home#request_contact'
