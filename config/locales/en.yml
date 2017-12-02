@@ -22,6 +22,8 @@
 en:
   app_title: Music Library
   app_description: A music library system to keep track of your music collection!
+  name: Rosabelle Armstead.
+  copyright_notice: All rights reserved.
   
   home: # home controller
     home: # home view
