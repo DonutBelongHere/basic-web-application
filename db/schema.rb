@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171202122027) do
+ActiveRecord::Schema.define(version: 20171202153104) do
 
   create_table "albums", force: :cascade do |t|
     t.string   "album_title",  null: false
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 20171202122027) do
   end
 
   add_index "albums", ["album_title"], name: "index_albums_on_album_title", unique: true
+
+  create_table "reviews", force: :cascade do |t|
+    t.integer  "song_id",    null: false
+    t.string   "reviewer",   null: false
+    t.integer  "rating",     null: false
+    t.text     "review",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "reviews", ["song_id"], name: "index_reviews_on_song_id"
 
   create_table "songs", force: :cascade do |t|
     t.integer  "album_id",   null: false

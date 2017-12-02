@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Song:
+  = @review.song
+%p
+  %b Reviewer:
+  = @review.reviewer
+%p
+  %b Rating:
+  = @review.rating
+%p
+  %b Review:
+  = @review.review
+
+= link_to 'Edit', edit_review_path(@review)
+\|
+= link_to 'Back', reviews_path
