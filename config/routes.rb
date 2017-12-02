@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  resources :reviews
-  resources :songs
+  resources :reviews, only: [:new, :create, :edit, :update, :destroy]
+  resources :songs, only: [:new, :create, :show, :edit, :update, :destroy]
   resources :albums
   root 'home#home'
   get '/contact' => 'home#contact'

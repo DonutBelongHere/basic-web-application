@@ -6,12 +6,6 @@ class SongsControllerTest < ActionController::TestCase
     @album = albums(:one)
   end
 
-  test "should get index" do
-    get :index
-    assert_response :success
-    assert_not_nil assigns(:songs)
-  end
-
   test "should get new" do
     get :new, album_id: @album
     assert_response :success
