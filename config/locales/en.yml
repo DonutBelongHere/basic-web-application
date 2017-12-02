@@ -20,4 +20,8 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  app_title: Music Library
+  app_description: A music library system to keep track of your music collection!
+  
+  home: # home view
+    home: # home controller
