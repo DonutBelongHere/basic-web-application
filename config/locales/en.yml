@@ -31,4 +31,5 @@ en:
       welcome_msg: A music library system to keep track of your music collection!
       
     contact: #contact view
+      contact_us: Contact Us
       contact_msg: Please fill out the form to get in touch.
