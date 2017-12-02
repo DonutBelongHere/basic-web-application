@@ -25,3 +25,5 @@ en:
   
   home: # home view
     home: # home controller
+      title: Music Library
+      welcome_msg: A music library system to keep track of your music collection!
