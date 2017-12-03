@@ -1,2 +1,8 @@
 // placeholder content
 %p= t('.welcome_msg') 
+#menu
+    - @albums.each do |album|
+        %h3= album.album_title
+        %div
+            - album.songs.each do |song|
+                %p= song.song_title
