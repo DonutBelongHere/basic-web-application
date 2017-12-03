@@ -10,8 +10,6 @@
     %meta{'name' => 'viewport', 'content' => 'width=device-width, initial-scale=1'}
     
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
-    = javascript_include_tag 'https://code.jquery.com/jquery-1.12.4.js'
-    = javascript_include_tag 'https://code.jquery.com/ui/1.12.1/jquery-ui.js'
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = javascript_include_tag 'modernizr'
     = csrf_meta_tags
@@ -19,7 +17,6 @@
   %body
   
     = render 'shared/header.html.haml'
-    // TODO: use jQuery for pop up box
     - flash.each do |key, value|
       = content_tag :div, content_tag(:p, value), id: "#{key}" unless value.blank?
     = yield
