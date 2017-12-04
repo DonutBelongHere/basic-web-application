@@ -23,6 +23,7 @@ $apptitlecolor: #010c30;
 $buttoncolor: #9ca3db;
 $buttontextcolor: #ffffff;
 $buttonhovercolor: #8086b4;
+$menucolor: #ffffff;
 
 h1 {
     text-align: center;
@@ -61,4 +62,23 @@ div#button {
 a#button:active {
     position: relative;
     top: 1px;
+}
+
+#menu {
+    width: 75%;
+    margin: auto;
+    background-color: $background;
+}
+.ui-accordion-content > * {
+    color: #000000;
+    padding: 10px;
+}
+
+.ui-accordion-header {
+    background-color: $buttoncolor;
+    margin: 0px;
+    background-image: none;
+    a, a:visited {
+        color: #000000;
+    }
 }
