@@ -32,7 +32,7 @@ h1 {
 body {
     background-color: $background;
 }
-div.button {
+div#button {
     height: 30px;
     width: 100px;
     border-radius: 5px;
@@ -43,6 +43,7 @@ div.button {
     box-shadow: inset 0px 1px 0px 1px #b7bce4;
     border: 1px solid #8086b4;
     font-weight: bold;
+    cursor: pointer;
     background-color: $buttoncolor;
     a, a:visited{
         color: $buttontextcolor;
@@ -53,12 +54,11 @@ div.button {
         top: 1px;
     }
 }
- a.button, a.button:visited{
+ a#button, a.button:visited{
     color: $buttontextcolor;
     text-decoration: none;
-    cursor: pointer;
 }
-a.button:active {
+a#button:active {
     position: relative;
     top: 1px;
 }

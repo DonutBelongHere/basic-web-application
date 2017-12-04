@@ -1,9 +1,9 @@
 /* global $ */
 $(document).ready(function() {
    $('div').mouseenter(function() {
-       $('.button').fadeTo('fast', 0.8);
+       $('div').fadeTo('fast', 0.7);
    });
    $('div').mouseleave(function() {
-       $('.button').fadeTo('fast', 1);
+       $('div').fadeTo('fast', 1);
    });
 });

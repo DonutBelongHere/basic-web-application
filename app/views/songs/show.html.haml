@@ -34,4 +34,5 @@
       %td= link_to t('.edit_review'), edit_review_path(review)
       %td= link_to t('.delete_review'), review, :method => :delete, :data => { :confirm => t('.delete_confirm')}
 %br
-%div{:class => "button"}= link_to t('.add_review'), new_review_path(song_id: @song)
+#button
+  = link_to t('.add_review'), new_review_path(song_id: @song)
