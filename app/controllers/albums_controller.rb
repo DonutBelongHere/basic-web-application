@@ -56,13 +56,8 @@ class AlbumsController < ApplicationController
   def destroy
     @album.destroy
     respond_to do |format|
-      if !@album.songs.empty?
-        format.html { redirect_to albums_url, notice: 'Album cannot be destroyed if it contains songs.' }
-        format.json { head :no_content }
-      else
-        format.html { redirect_to albums_url, notice: 'Album was successfully destroyed.' }
-        format.json { head :no_content }
-      end
+      format.html { redirect_to albums_url, notice: 'Album was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
