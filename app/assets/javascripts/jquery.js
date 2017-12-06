@@ -1,6 +1,5 @@
 /* global $ */
-// TODO: fix only occurs on first load
-$(document).ready(function() {
+$(document).on('turbolinks:load', function() {
    $('div#button').mouseenter(function() {
        $('div#button').fadeTo('fast', 0.7);
    });
