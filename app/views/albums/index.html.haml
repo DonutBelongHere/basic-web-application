@@ -1,22 +1,24 @@
-%h3 Albums
-%table
-  %thead
-    %tr
-      %th Album Title
-      %th Album Artist
-      %th Release Date
-      %th{:colspan => "3"}= 'Actions'
-
-  %tbody
-    - @albums.each do |album|
+%h2 Albums
+- if !@albums.empty?
+  %table
+    %thead
       %tr
-        %td= album.album_title
-        %td= album.album_artist
-        %td= album.release_date
-        %td= link_to t('.show_album'), album
-        %td= link_to t('.edit_album'), edit_album_path(album)
-        %td= link_to t('.delete_album'), album, method: :delete, data: { confirm: 'Are you sure?' }
+        %th Album Title
+        %th Album Artist
+        %th Release Date
+        %th{:colspan => "3"}= 'Actions'
 
+    %tbody
+      - @albums.each do |album|
+        %tr
+          %td= album.album_title
+          %td= album.album_artist
+          %td= album.release_date
+          %td= link_to t('.show_album'), album
+          %td= link_to t('.edit_album'), edit_album_path(album)
+          %td= link_to t('.delete_album'), album, method: :delete, data: { confirm: 'Are you sure?' }
+- else
+  %p You have no albums.
 %br
 #button
   = link_to t('.new_album'), new_album_path

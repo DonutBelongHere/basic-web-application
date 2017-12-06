@@ -1,21 +1,25 @@
 $headercolor: #010c30;
+$headerfont: 'Bookman Old Style';
 $tableheadercolor: #2f3855;
 $tableheadertextcolor: #ffffff;
 $tablecontenttextcolor: #454b66;
 $eventablerowcolor: #c9cceb;
 $oddtablerowcolor: #acb8d7;
+$tablebordercolor: #d1e1ff;
+$tabletextcolor: #454b66;
 body {
   table {
     width: 75%;
     margin: auto;
+    color: $tabletextcolor;
   }
   
   th {
     height: 30px;
     background-color: $tableheadercolor;
     color: $tableheadertextcolor;
-    font-weight: bold;
     text-align: center;
+    font-family: $headerfont;
   }
   
   tr {
@@ -29,12 +33,20 @@ body {
   
   td, th {
     padding: 5px;
-    border-bottom: 1px solid #d1e1ff;
-    border-left: 1px solid #d1e1ff
+    border-bottom: 1px solid $tablebordercolor;
+    border-left: 1px solid $tablebordercolor;
+    
+    a, a:visited {
+      text-decoration: none;
+      color: $tabletextcolor;
+    }
+    a:hover {
+      font-weight: bold;
+    }
   }
 }
 
-h3{
+h1, h2, h3{
   text-align: center;
 }
 
