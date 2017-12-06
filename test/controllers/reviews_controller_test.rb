@@ -16,7 +16,7 @@ class ReviewsControllerTest < ActionController::TestCase
       post :create, review: { rating: @review.rating, review: @review.review, reviewer: @review.reviewer, song_id: @review.song_id }
     end
 
-    assert_redirected_to review_path(assigns(:review))
+    assert_redirected_to @review.song
   end
 
   test "should get edit" do
@@ -26,7 +26,7 @@ class ReviewsControllerTest < ActionController::TestCase
 
   test "should update review" do
     patch :update, id: @review, review: { rating: @review.rating, review: @review.review, reviewer: @review.reviewer, song_id: @review.song_id }
-    assert_redirected_to review_path(assigns(:review))
+    assert_redirected_to @review.song
   end
 
   test "should destroy review" do
@@ -34,6 +34,6 @@ class ReviewsControllerTest < ActionController::TestCase
       delete :destroy, id: @review
     end
 
-    assert_redirected_to reviews_path
+    assert_redirected_to @review.song
   end
 end

@@ -39,6 +39,6 @@ class SongsControllerTest < ActionController::TestCase
       delete :destroy, id: @song
     end
 
-    assert_redirected_to songs_path
+    assert_redirected_to @song.album
   end
 end
