@@ -1,7 +1,12 @@
-%h1 Editing song
+.container
+    %h1 
+        Editing
+        = @song.song_title
 
 = render 'form'
 
-= link_to 'Show', @song
-\|
-= link_to 'Back', songs_path
+#controls
+    #editbutton
+        = link_to 'Show', @song
+    #backbutton
+        = link_to 'Back', @song.album

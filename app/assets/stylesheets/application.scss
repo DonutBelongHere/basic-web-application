@@ -460,104 +460,93 @@ template {
 [hidden] {
   display: none;
 }
-/* End of normalize
+/* End of normalize */
  
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
- /* Global Styles */
- 
+/* styles */
 $background: #d1e1ff;
 $apptitlecolor: #010c30;
-$buttoncolor: #9ca3db;
-$buttontextcolor: #ffffff;
-$buttonhovercolor: #8086b4;
-$menucolor: #ffffff;
+$dialogcolor: #9ca3db;
 $headerfont: 'Bookman Old Style';
 $globalfont: 'Trebuchet MS', Helvetica, sans-serif;
 
-h1, h2, h3 {
-  font-family: $headerfont;
-}
-h4, h5, h6 {
-  font-family: $globalfont;
-  font-weight: normal;
-  text-align: center;
+/* set background color */
+body {
+	background-color: $background;
 }
 
+/* containers to make up skeleton of pages */
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* ==================================compatibility with different screen sizes================================== */
+/* for devices with screen size > 400px wide 
+--------------------------------------------------------------------*/
+@media (min-width: 400px) {
+  .container {
+    width: 90%;
+    padding: 0;
+  }
+}
+
+/* For devices with screen size > 600px wide
+--------------------------------------------------------------------*/
+@media (min-width: 600px) {
+  .container {
+    width: 92%;
+  }
+}
+/*============================================================================================================== */
+
+/* set up font sizes 
+--------------------------------------------------------------------*/
+html {
+  font-size: 10px; //1em = 10px
+}
 h1 {
-    text-align: center;
-    padding: 0px 0px 12px 0px;
-    color: $apptitlecolor;
+  font-size: 2.5em;
+}
+h2 {
+  font-size: 2.0em;
+}
+h3 {
+  font-size: 1.7em;
+}
+h4 {
+  font-size: 1.5em;
 }
 body {
-    background-color: $background;
-    font-family: $globalfont;
-}
-div#controls {
-  margin: 0px auto;
-  width: 13.6%;
-}
-div#editbutton {
-  display: inline-block;
-}
-div#backbutton {
-  display: inline-block;
-}
-div#button, div#editbutton, div#backbutton {
-    height: 30px;
-    width: 100px;
-    border-radius: 5px;
-    margin: auto;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 30px;
-    box-shadow: inset 0px 1px 0px 1px #b7bce4;
-    border: 1px solid #8086b4;
-    font-weight: bold;
-    cursor: pointer;
-    background-color: $buttoncolor;
-    a, a:visited{
-        color: $buttontextcolor;
-        text-decoration: none;
-    }
-    a:active {
-        position: relative;
-        top: 1px;
-    }
-}
- a#button, a#button:visited, a#editbutton, a#editbutton:visited, a#backbutton, a#backbutton:visited {
-    color: $buttontextcolor;
-    text-decoration: none;
-}
-a#button:active, #backbutton:active, a#editbutton:active {
-    position: relative;
-    top: 1px;
+  font-size: 1.5em;
 }
 
-#menu {
-    width: 75%;
-    margin: auto;
-    background-color: $background;
+/* set up font styles
+--------------------------------------------------------------------*/
+h1, h2, h3 {
+	font-family: $headerfont;
+	padding: 0px 0px 12px 0px;
 }
-.ui-accordion-content > *, .ui-widget-content{
-    background-color: $background;
-    padding: 0px;
-    border: 0px;
+h4, h5, h6, body {
+	font-family: $globalfont;
+	font-weight: normal;
+}
+h1, h2, h3, h4, h5, h6 {
+	text-align: center;
+	color: $apptitlecolor;
 }
 
-.ui-accordion-header {
-    background-color: $buttoncolor;
-    margin: 0px;
-    background-image: none;
-    a, a:visited {
-        color: #000000;
-    }
-}
+/* global dialog box style 
+--------------------------------------------------------------------*/
 .ui-dialog {
-  background-color: #ffffff;
+  background-color: $background;
 }
-
 .ui-widget-header {
   background-color: $apptitlecolor;
   background-image: none;

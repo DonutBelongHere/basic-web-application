@@ -1,23 +1,24 @@
-= form_for @review do |f|
-  - if @review.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
-      %ul
-        - @review.errors.full_messages.each do |message|
-          %li= message
+.container
+  = form_for @review do |f|
+    - if @review.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
+        %ul
+          - @review.errors.full_messages.each do |message|
+            %li= message
 
-  .field
-    = f.label :song
-    %p= @review.song.song_title
-    = f.hidden_field :song_id, value: @review.song.id
-  .field
-    = f.label :reviewer
-    = f.text_field :reviewer
-  .field
-    = f.label :rating
-    = f.number_field :rating
-  .field
-    = f.label :review
-    = f.text_area :review
-  .actions
-    = f.submit 'Save'
+    .field
+      = f.label :song
+      %p= @review.song.song_title
+      = f.hidden_field :song_id, value: @review.song.id
+    .field
+      = f.label :reviewer
+      = f.text_field :reviewer
+    .field
+      = f.label :rating
+      = f.number_field :rating
+    .field
+      = f.label :review
+      = f.text_area :review
+    .actions
+      = f.submit 'Save'

@@ -2,8 +2,6 @@
 $(document).on('turbolinks:load', function() {
    //accordion view on home page for ease of viewing many albums
    $('#menu').accordion({collapsible: true, active: 'none'}, "option", "autoHeight", false );
-   //prevent button conflict
-   $.fn.bootstrapBtn = $.fn.button.noConflict();
    //fade buttons when mouseover, restore when mouseleave
    $('div#button').mouseenter(function() {
        $('div#button').fadeTo('fast', 0.7);

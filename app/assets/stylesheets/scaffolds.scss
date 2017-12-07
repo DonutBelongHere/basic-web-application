@@ -7,6 +7,8 @@ $eventablerowcolor: #c9cceb;
 $oddtablerowcolor: #acb8d7;
 $tablebordercolor: #d1e1ff;
 $tabletextcolor: #454b66;
+$buttoncolor: #9ca3db;
+$buttontextcolor: #ffffff;
 body {
   table {
     width: 75%;
@@ -51,7 +53,6 @@ h1, h2, h3{
 }
 
 p, ol, ul, td {
-  font-size: 13px;
   line-height: 18px;
 }
 
@@ -101,4 +102,36 @@ div {
     list-style: square;
   }
 
+}
+
+/* buttons 
+--------------------------------------------------------------------*/
+#controls {
+  margin: 0px auto;
+  width: 13.6%;
+}
+#editbutton, #backbutton {
+  display: inline-block;
+}
+#button, #editbutton, #backbutton {
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    margin: auto;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 30px;
+    box-shadow: inset 0px 1px 0px 1px #b7bce4;
+    border: 1px solid #8086b4;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: $buttoncolor;
+    a, a:visited{
+        color: $buttontextcolor;
+        text-decoration: none;
+    }
+    &:active {
+        position: relative;
+        top: 1px;
+    }
 }

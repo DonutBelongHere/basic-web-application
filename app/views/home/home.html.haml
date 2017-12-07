@@ -1,23 +1,25 @@
-%p= t('.welcome_msg') 
-- if !@albums.empty?
-    #menu
-        - @albums.each do |album|
-            %h3= album.album_title
-            %div
-                - if !album.songs.empty?
-                    %table
-                        %thead
-                            %tr
-                                %th Title
-                                %th Genre
-                                %th Length (nearest minute)
-                        %tbody
-                            - album.songs.each do |song|
+.container
+    %p= t('.welcome_msg')
+.container
+    - if !@albums.empty?
+        #menu
+            - @albums.each do |album|
+                %h3= album.album_title
+                %div
+                    - if !album.songs.empty?
+                        %table
+                            %thead
                                 %tr
-                                    %td= song.song_title
-                                    %td= song.genre
-                                    %td= song.length
-                - else
-                    %p This album has no songs. Go to the albums page and select the album to add songs.
-- else                    
-    %p You have no albums at the moment. Go to the albums page to add a new album.
+                                    %th Title
+                                    %th Genre
+                                    %th Length (nearest minute)
+                            %tbody
+                                - album.songs.each do |song|
+                                    %tr
+                                        %td= song.song_title
+                                        %td= song.genre
+                                        %td= song.length
+                    - else
+                        %p This album has no songs. Go to the albums page and select the album to add songs.
+    - else                    
+        %p You have no albums at the moment. Go to the albums page to add a new album.

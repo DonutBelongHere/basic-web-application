@@ -9,6 +9,13 @@ $navtextcolor: #d1e1ff;
 $navhovercolor: #2f3855;
 $textcolor: #454b66;
 
+$background: #d1e1ff;
+$apptitlecolor: #010c30;
+$buttoncolor: #9ca3db;
+$buttontextcolor: #ffffff;
+$buttonhovercolor: #8086b4;
+$menucolor: #ffffff;
+
 form label, form input {
     display: block;
 }
@@ -49,4 +56,24 @@ p.footer {
     border-top: 1px solid;
     text-align: center;
     margin-top: 15px;
+}
+
+/* accordion menu */
+#menu {
+    width: 75%;
+    margin: auto;
+    background-color: $background;
+}
+.ui-accordion-content > *, .ui-widget-content{
+    background-color: $background;
+    padding: 0px;
+    border: 0px;
+}
+.ui-accordion-header {
+    background-color: $buttoncolor;
+    margin: 0px;
+    background-image: none;
+    a, a:visited {
+        color: #000000;
+    }
 }

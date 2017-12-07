@@ -1,7 +1,12 @@
-%h1 Editing album
+.container
+    %h1 
+        Edit
+        =@album.album_title
 
 = render 'form'
 
-= link_to 'Show', @album
-\|
-= link_to 'Back', albums_path
+#controls
+    #editbutton
+        = link_to 'Show', @album
+    #backbutton
+        = link_to 'Back', albums_path

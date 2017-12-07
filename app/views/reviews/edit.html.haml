@@ -1,7 +1,10 @@
-%h1 Editing review
+.container
+    %h1 Edit Review
 
 = render 'form'
 
-= link_to 'Show', @review
-\|
-= link_to 'Back', song_path
+#controls
+    #editbutton
+        = link_to 'Show', @review
+    #backbutton
+        = link_to 'Back', song_path

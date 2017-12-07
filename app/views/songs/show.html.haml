@@ -1,37 +1,38 @@
-%h2
-  = @song.song_title
-%h4
-  = @song.album.album_title
-  %br
-  = @song.genre
-  %br
-  = @song.length
-  minutes
+.container
+  %h2
+    = @song.song_title
+  %h4
+    = @song.album.album_title
+    %br
+    = @song.genre
+    %br
+    = @song.length
+    minutes
 #controls  
   #editbutton
     = link_to t('.edit_song'), edit_song_path(@song)
   #backbutton
     = link_to t('.back'), @song.album
-
-- if !@song.reviews.empty?
-  %p Ratings:
-  %table
-    %thead
-      %tr
-        %th Reviewer
-        %th Rating (out of 5)
-        %th Review
-        %th{:colspan => "2"}= 'Actions'
-    %tbody
-    - @song.reviews.each do |review|
-      %tr 
-        %td= review.reviewer
-        %td= review.rating
-        %td= review.review
-        %td= link_to t('.edit_review'), edit_review_path(review)
-        %td= link_to t('.delete_review'), review, :method => :delete, :data => { :confirm => t('.delete_confirm')}
-- else
-  %p This song has no reviews.
+.container
+  - if !@song.reviews.empty?
+    %p Ratings:
+    %table
+      %thead
+        %tr
+          %th Reviewer
+          %th Rating (out of 5)
+          %th Review
+          %th{:colspan => "2"}= 'Actions'
+      %tbody
+      - @song.reviews.each do |review|
+        %tr 
+          %td= review.reviewer
+          %td= review.rating
+          %td= review.review
+          %td= link_to t('.edit_review'), edit_review_path(review)
+          %td= link_to t('.delete_review'), review, :method => :delete, :data => { :confirm => t('.delete_confirm')}
+  - else
+    %p This song has no reviews.
 %br
 #button
   = link_to t('.add_review'), new_review_path(song_id: @song)
