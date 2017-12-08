@@ -29,6 +29,6 @@ $(document).on('turbolinks:load', function() {
        $('div#newbutton').fadeTo('fast', 1);
    });
    //dialog boxes for notices and alerts to make it easier for user to see them
-   $( "#notice" ).dialog();
-   $( "#alert" ).dialog();
+   $( '#notice' ).dialog();
+   $( '#alert' ).dialog();
 });
