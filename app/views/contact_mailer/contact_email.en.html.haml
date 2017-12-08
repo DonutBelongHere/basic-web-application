@@ -1,5 +1,5 @@
-%p= "Dear #{t('app_title')},"
-%p= "Please get in touch with me?"
+%p= t('email_intro')
+%p= t('email_topic')
 
 %dl
     %dt Name:
@@ -12,5 +12,3 @@
 %p= @message
 %p Thanks,
 %p= @name
-
-// TODO: jQuery to verify important fields have content

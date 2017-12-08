@@ -5,6 +5,8 @@ en:
   app_description: A music library system to keep track of your music collection!
   name: Rosabelle Armstead.
   copyright_notice: All rights reserved.
+  email_intro: Dear Music Library owner,
+  email_topic: I have a query. Please can you be able to respond ASAP?
   #========================== home controller ===========================#
   home:
     #===================== home views and actions ===================#
@@ -21,14 +23,14 @@ en:
       no_albums: 'You have no albums at the moment. Go to the albums page to add new albums.'
     contact:
       contact_us: Contact Us
-      contact_msg: Please fill out the form to get in touch.
+      contact_msg: If you have any queries, please fill out the form below to get in touch.
       name: "Name:"
       enter_name: Enter your name
       email: "Email:"
       enter_email: Enter your email address
       mobile: "Mobile Number:"
       enter_mobile: Enter your mobile number
-      message: "Message:"
+      message: "Query:"
       enter_message: Let us know what you want to say!
       submit: Submit
     request_contact:
