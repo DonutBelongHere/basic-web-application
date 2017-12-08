@@ -23,8 +23,8 @@ gem 'bootstrap-sass', '~>3.3.6'
 # Using modernizr
 gem 'modernizr-rails'
 
-# Adding authentication
-gem 'devise'
+# Adding jQuery form validation
+gem 'jquery-validation-rails'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
