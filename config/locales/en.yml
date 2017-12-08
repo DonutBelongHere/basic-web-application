@@ -39,6 +39,7 @@ en:
       
   #========================= album controller ==========================#
   albums:
+    notice: Album was successfully created.
     #================== album views and actions ==================#
     form:
       save: Save

@@ -2,7 +2,8 @@
 * Styles for elements on pages for scaffolds, including tables and buttons
 */
 
-/* table styles */
+/* table styles 
+--------------------------------------------------------------------*/
 $headerfont: 'Bookman Old Style';
 $tableheadercolor: #2f3855;
 $tableheadertextcolor: #ffffff;
@@ -10,7 +11,8 @@ $eventablerowcolor: #c9cceb;
 $oddtablerowcolor: #acb8d7;
 $tablebordercolor: #d1e1ff;
 $tabletextcolor: #454b66;
-/* button styles */
+/* button styles 
+--------------------------------------------------------------------*/
 $buttoncolor: #9ca3db;
 $buttontextcolor: #ffffff;
 
@@ -111,4 +113,10 @@ div {
         position: relative;
         top: 1px;
     }
+}
+
+/* forms
+--------------------------------------------------------------------*/
+form label, form input {
+    display: block;
 }

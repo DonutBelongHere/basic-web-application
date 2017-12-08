@@ -13,8 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ 
  /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
-
 /* Document
    ========================================================================== */
 
@@ -461,19 +461,32 @@ template {
   display: none;
 }
 /* End of normalize */
+
+/*
+* global styles for application
+*/
  
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* styles 
+/* general styles 
 --------------------------------------------------------------------*/
-$dialogbackground: #ffffff;
 $background: #d1e1ff;
 $apptitlecolor: #010c30;
-$dialogcolor: #9ca3db;
-$errorcolor: #c4384a;
 $headerfont: 'Bookman Old Style';
 $globalfont: 'Trebuchet MS', Helvetica, sans-serif;
+/* navigation bar styles
+--------------------------------------------------------------------*/
+$navbarcolor: #010c30;
+$navtextcolor: #d1e1ff;
+$navhovercolor: #2f3855;
+/* error styles
+--------------------------------------------------------------------*/
+$errorcolor: #c4384a;
+/* dialog box styles
+--------------------------------------------------------------------*/
+$dialogbackground: #ffffff;
+$dialogcolor: #9ca3db;
 
 /* set background color 
 --------------------------------------------------------------------*/
@@ -554,6 +567,37 @@ h1, h2, h3, h4, h5, h6 {
 }
 .error {
   color: $errorcolor;
+}
+
+/* navigation bar style
+--------------------------------------------------------------------*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: $navbarcolor;
+}
+li {
+    float: left;
+    color: $navtextcolor;
+    a {
+        display: block;
+        color: $navtextcolor;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        
+        &:visited {
+            color: $navtextcolor;
+        }
+        
+        &:hover {
+            background-color: $navhovercolor;
+            color: $navtextcolor;
+            text-decoration: none;
+        }
+    }
 }
 
 /* global dialog box style 

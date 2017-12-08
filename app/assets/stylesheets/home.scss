@@ -2,63 +2,32 @@
 * Styles for home controller
 */
 
-$navbarcolor: #010c30;
-$navtextcolor: #d1e1ff;
-$navhovercolor: #2f3855;
+/* general styles
+--------------------------------------------------------------------*/
 $textcolor: #454b66;
-
 $background: #d1e1ff;
 $apptitlecolor: #010c30;
-$buttoncolor: #9ca3db;
-$buttontextcolor: #ffffff;
-$buttonhovercolor: #8086b4;
-$menucolor: #ffffff;
 $headerfont: 'Bookman Old Style';
 $globalfont: 'Trebuchet MS', Helvetica, sans-serif;
+/* button styles
+--------------------------------------------------------------------*/
+$accordioncolor: #9ca3db;
+$accordiontextcolor: #ffffff;
 
-form label, form input {
-    display: block;
-}
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: $navbarcolor;
-}
-li {
-    float: left;
-    color: $navtextcolor;
-    a {
-        display: block;
-        color: $navtextcolor;
-        text-align: center;
-        padding: 14px 16px;
-        text-decoration: none;
-        
-        &:visited {
-            color: $navtextcolor;
-        }
-        
-        &:hover {
-            background-color: $navhovercolor;
-            color: $navtextcolor;
-            text-decoration: none;
-        }
-    }
-}
+/* p elements and footer
+--------------------------------------------------------------------*/
 p {
     color: $textcolor;
     width: 100%;
     padding: 5px;
 }
-p.footer {
+.footer {
     border-top: 1px solid;
     text-align: center;
     margin-top: 15px;
 }
 
-/* accordion menu 
+/* accordion menu
 --------------------------------------------------------------------*/
 #menu {
     width: 75%;
@@ -84,9 +53,9 @@ p.footer {
             border: 1px solid #8086b4;
             font-weight: bold;
             cursor: pointer;
-            background-color: $buttoncolor;
+            background-color: $accordioncolor;
             a, a:visited{
-                color: $buttontextcolor;
+                color: $accordiontextcolor;
                 text-decoration: none;
                 display: block;
             }
@@ -97,13 +66,13 @@ p.footer {
         }
     }
     .ui-accordion-header {
-        background-color: $buttoncolor;
+        background-color: $accordioncolor;
         margin: 0px;
         background-image: none;
         font-family: $headerfont;
         
-        a, a:visited {
-            color: #000000;
+        a, {
+            color: $accordiontextcolor;
         }
     }
 }
