@@ -1,5 +1,5 @@
 .container
-  = form_for @song do |f|
+  = form_for @song, :html => {id: 'form'} do |f|
     - if @song.errors.any?
       #error_explanation
         %h2= "#{pluralize(@song.errors.count, "error")} prohibited this song from being saved:"
@@ -11,12 +11,12 @@
       = f.hidden_field :album_id, value: @song.album.id
     .field
       = f.label :song_title
-      = f.text_field :song_title
+      = f.text_field :song_title, :class => "required"
     .field
       = f.label :genre
-      = f.text_field :genre
+      = f.text_field :genre, :class => "required"
     .field
       = f.label :length
-      = f.number_field :length
+      = f.number_field :length, :class => "required digits"
     .actions
       = f.submit t('.save')

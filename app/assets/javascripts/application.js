@@ -13,6 +13,7 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require jquery.validate.additional-methods
 //= require jquery.validate
 //= require turbolinks
 //= require_tree .

@@ -1,5 +1,5 @@
 .container
-  = form_for @album, :html => {id: 'albumform'} do |f|
+  = form_for @album, :html => {id: 'form'} do |f|
     - if @album.errors.any?
       #error_explanation
         %h2= "#{pluralize(@album.errors.count, "error")} prohibited this album from being saved:"
@@ -9,12 +9,12 @@
 
     .field
       = f.label :album_title
-      = f.text_field :album_title
+      = f.text_field :album_title, :class => "required"
     .field
       = f.label :album_artist
-      = f.text_field :album_artist
+      = f.text_field :album_artist, :class => "required"
     .field
       = f.label :release_date
-      = f.date_select :release_date
+      = f.date_select :release_date, :class => "required"
     .actions
       = f.submit t('.save')

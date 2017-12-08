@@ -471,6 +471,7 @@ $dialogbackground: #ffffff;
 $background: #d1e1ff;
 $apptitlecolor: #010c30;
 $dialogcolor: #9ca3db;
+$errorcolor: #c4384a;
 $headerfont: 'Bookman Old Style';
 $globalfont: 'Trebuchet MS', Helvetica, sans-serif;
 
@@ -550,6 +551,9 @@ h4, h5, h6, body {
 h1, h2, h3, h4, h5, h6 {
 	text-align: center;
 	color: $apptitlecolor;
+}
+.error {
+  color: $errorcolor;
 }
 
 /* global dialog box style 

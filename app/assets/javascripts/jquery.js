@@ -31,4 +31,6 @@ $(document).on('turbolinks:load', function() {
    //dialog boxes for notices and alerts to make it easier for user to see them
    $( '#notice' ).dialog();
    $( '#alert' ).dialog();
+   //form validation
+   $('#form').validate();
 });

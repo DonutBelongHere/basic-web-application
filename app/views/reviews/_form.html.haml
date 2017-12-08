@@ -1,5 +1,5 @@
 .container
-  = form_for @review do |f|
+  = form_for @review, :html => {id: 'form'} do |f|
     - if @review.errors.any?
       #error_explanation
         %h2= "#{pluralize(@review.errors.count, "error")} prohibited this review from being saved:"
@@ -11,12 +11,12 @@
       = f.hidden_field :song_id, value: @review.song.id
     .field
       = f.label :reviewer
-      = f.text_field :reviewer
+      = f.text_field :reviewer, :class => "required"
     .field
       = f.label :rating
-      = f.number_field :rating
+      = f.number_field :rating, :class => "required digits", :range => [1, 5]
     .field
       = f.label :review
-      = f.text_area :review
+      = f.text_area :review, :class => "required"
     .actions
       = f.submit t('.save')
