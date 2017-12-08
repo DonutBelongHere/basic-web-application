@@ -1,12 +1,12 @@
 .container
     %h1 
-        Editing
+        = t('.edit_title')
         = @song.song_title
 
 = render 'form'
 
 #controls
     #editbutton
-        = link_to 'Show', @song
+        = link_to t('.show_song'), @song
     #backbutton
-        = link_to 'Back', @song.album
+        = link_to t('.back'), @song.album

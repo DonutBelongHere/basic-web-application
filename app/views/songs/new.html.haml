@@ -1,7 +1,9 @@
 .container
-    %h1 New song
+    %h1= t('.new_song')
+    %h4
+        = @album.album_title
 
 = render 'form'
 
 #button
-    = link_to 'Back', albums_path
+    = link_to t('.back'), @song.album

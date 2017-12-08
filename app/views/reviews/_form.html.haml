@@ -8,8 +8,6 @@
             %li= message
 
     .field
-      = f.label :song
-      %p= @review.song.song_title
       = f.hidden_field :song_id, value: @review.song.id
     .field
       = f.label :reviewer
@@ -21,4 +19,4 @@
       = f.label :review
       = f.text_area :review
     .actions
-      = f.submit 'Save'
+      = f.submit t('.save')

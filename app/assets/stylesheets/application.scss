@@ -465,19 +465,23 @@ template {
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-/* styles */
+/* styles 
+--------------------------------------------------------------------*/
+$dialogbackground: #ffffff;
 $background: #d1e1ff;
 $apptitlecolor: #010c30;
 $dialogcolor: #9ca3db;
 $headerfont: 'Bookman Old Style';
 $globalfont: 'Trebuchet MS', Helvetica, sans-serif;
 
-/* set background color */
+/* set background color 
+--------------------------------------------------------------------*/
 body {
 	background-color: $background;
 }
 
-/* containers to make up skeleton of pages */
+/* containers to make up skeleton of pages 
+--------------------------------------------------------------------*/
 .container {
   position: relative;
   width: 100%;
@@ -485,6 +489,12 @@ body {
   margin: 0 auto;
   padding: 0 20px;
   box-sizing: border-box;
+}
+
+/* line height setup
+--------------------------------------------------------------------*/
+p, ol, ul, td {
+  line-height: 18px;
 }
 
 /* ==================================compatibility with different screen sizes================================== */
@@ -545,7 +555,7 @@ h1, h2, h3, h4, h5, h6 {
 /* global dialog box style 
 --------------------------------------------------------------------*/
 .ui-dialog {
-  background-color: $background;
+  background-color: $dialogbackground;
 }
 .ui-widget-header {
   background-color: $apptitlecolor;

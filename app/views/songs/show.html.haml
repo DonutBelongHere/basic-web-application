@@ -8,21 +8,23 @@
     %br
     = @song.length
     minutes
-#controls  
+#showcontrols  
+  #newbutton
+    = link_to t('.add_song'), new_song_path(album_id: @song.album)
   #editbutton
     = link_to t('.edit_song'), edit_song_path(@song)
   #backbutton
     = link_to t('.back'), @song.album
 .container
   - if !@song.reviews.empty?
-    %p Ratings:
+    %h3= t('.ratings_title')
     %table
       %thead
         %tr
-          %th Reviewer
-          %th Rating (out of 5)
-          %th Review
-          %th{:colspan => "2"}= 'Actions'
+          %th= t('.rating_col_reviewer')
+          %th= t('.rating_col_rating')
+          %th= t('.rating_col_review')
+          %th{:colspan => "2"}= t('.actions')
       %tbody
       - @song.reviews.each do |review|
         %tr 
@@ -32,7 +34,7 @@
           %td= link_to t('.edit_review'), edit_review_path(review)
           %td= link_to t('.delete_review'), review, :method => :delete, :data => { :confirm => t('.delete_confirm')}
   - else
-    %p This song has no reviews.
+    %p= t('.no_reviews')
 %br
 #button
-  = link_to t('.add_review'), new_review_path(song_id: @song)
+  = link_to t('.new_review'), new_review_path(song_id: @song)

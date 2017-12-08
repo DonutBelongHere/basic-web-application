@@ -1,7 +1,9 @@
 .container
-    %h1 New review
+    %h1= t('.new_review')
+    %h4
+        = @song.song_title
 
 = render 'form'
 
 #button
-    = link_to 'Back', reviews_path
+    = link_to t('.back'), @song

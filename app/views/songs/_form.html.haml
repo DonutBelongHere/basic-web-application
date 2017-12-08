@@ -8,8 +8,6 @@
             %li= message
 
     .field
-      = f.label :album
-      %p= @song.album.album_title
       = f.hidden_field :album_id, value: @song.album.id
     .field
       = f.label :song_title
@@ -21,4 +19,4 @@
       = f.label :length
       = f.number_field :length
     .actions
-      = f.submit 'Save'
+      = f.submit t('.save')

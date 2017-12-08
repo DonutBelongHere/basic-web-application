@@ -7,19 +7,26 @@
                 %h3= album.album_title
                 %div
                     - if !album.songs.empty?
+                        #button
+                            = link_to t('.show_album'), album
+                        %br
                         %table
                             %thead
                                 %tr
-                                    %th Title
-                                    %th Genre
-                                    %th Length (nearest minute)
+                                    %th= t('.song_col_title')
+                                    %th= t('.song_col_genre')
+                                    %th= t('.song_col_length')
+                                    %th= t('.reviews')
+                                    %th
                             %tbody
                                 - album.songs.each do |song|
                                     %tr
                                         %td= song.song_title
                                         %td= song.genre
                                         %td= song.length
+                                        %td= song.reviews.count
+                                        %td= link_to t('.show'), song
                     - else
-                        %p This album has no songs. Go to the albums page and select the album to add songs.
+                        %p= t('.no_songs')
     - else                    
-        %p You have no albums at the moment. Go to the albums page to add a new album.
+        %p= t('.no_albums')

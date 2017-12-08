@@ -1,10 +1,10 @@
 .container
-    %h1 Edit Review
+    %h1= t('.edit_title')
 
 = render 'form'
 
 #controls
     #editbutton
-        = link_to 'Show', @review
+        = link_to t('.show_review'), @review
     #backbutton
-        = link_to 'Back', song_path
+        = link_to t('.back'), song_path

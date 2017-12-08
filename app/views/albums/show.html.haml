@@ -4,7 +4,7 @@
   %h4
     = @album.album_artist
     %br
-    %b Released: 
+    %b= t('.released') 
     = @album.release_date
 #controls
   #editbutton
@@ -14,25 +14,27 @@
 
 .container
   - if !@album.songs.empty?
-    %h3 Songs:
+    %h3= t('.songs_title')
     %table
       %thead
         %tr
-          %th Title
-          %th Genre
-          %th Length (nearest minute)
-          %th{:colspan => "3"}= 'Actions'
+          %th= t('.song_col_title')
+          %th= t('song_col_genre')
+          %th= t('.song_col_length')
+          %th= t('.song_col_reviews')
+          %th{:colspan => "3"}= t('.actions')
       %tbody
       - @album.songs.each do |song|
         %tr 
           %td= song.song_title
           %td= song.genre
           %td= song.length
+          %td= song.reviews.count
           %td= link_to t('.show_song'), song
           %td= link_to t('.edit_song'), edit_song_path(song)
           %td= link_to t('.delete_song'), song, :method => :delete, :data => { :confirm => t('.delete_confirm')}
   - else
-    %p This album has no songs.
+    %p= t('.no_songs')
 %br
 #button
-  = link_to t('.add_song'), new_song_path(album_id: @album)
+  = link_to t('.new_song'), new_song_path(album_id: @album)

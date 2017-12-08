@@ -1,12 +1,12 @@
 .container
     %h1 
-        Edit
-        =@album.album_title
+        = t('.edit')
+        = @album.album_title
 
 = render 'form'
 
 #controls
     #editbutton
-        = link_to 'Show', @album
+        = link_to t('.show'), @album
     #backbutton
-        = link_to 'Back', albums_path
+        = link_to t('.back'), albums_path

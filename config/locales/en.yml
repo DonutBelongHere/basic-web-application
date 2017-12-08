@@ -1,36 +1,25 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
+#strings for different models kept separate in case views for each model become different
 en:
+  #=========================== global strings ===========================#
   app_title: Music Library
   app_description: A music library system to keep track of your music collection!
   name: Rosabelle Armstead.
   copyright_notice: All rights reserved.
-  
-  home: # home controller
-    home: # home view
+  #========================== home controller ===========================#
+  home:
+    #===================== home views and actions ===================#
+    home:
       title: Music Library
       welcome_msg: A music library system to keep track of your music collection!
-      
-    contact: #contact view
+      show: Show
+      show_album: Show Album
+      song_col_title: Title
+      song_col_genre: Genre
+      song_col_length: Length
+      song_col_reviews: Reviews
+      no_songs: 'This album has no songs. Go to the albums page and select the album to add songs.'
+      no_albums: 'You have no albums at the moment. Go to the albums page to add new albums.'
+    contact:
       contact_us: Contact Us
       contact_msg: Please fill out the form to get in touch.
       name: "Name:"
@@ -42,40 +31,85 @@ en:
       message: "Message:"
       enter_message: Let us know what you want to say!
       submit: Submit
-      
-    request_contact: #request contact action
+    request_contact:
       no_email: Please enter an email!
       email_sent: Thank you! Your message has been sent.
       
+  #========================= album controller ==========================#
   albums:
+    #================== album views and actions ==================#
+    form:
+      save: Save
+    edit:
+      edit_title: Edit
+      show_album: Show
+      back: Back
+    index:
+      albums_title: Albums
+      album_col_title: Title
+      album_col_artist: Artist
+      album_col_release: Release Date
+      actions: Actions
+      show_album: Show
+      edit_album: Edit
+      delete_album: Delete
+      delete_confirm: Are you sure you want to delete this album?
+      no_albums: 'You have no albums.'
+      new_album: New Album
+    new:
+      new_album: New Album
+      back: Back
     show:
-      add_song: Add Song
+      released: 'Released:'
       edit_album: Edit Album
       back: Back
+      songs_title: Songs
+      song_col_title: Title
+      song_col_genre: Genre
+      song_col_length: Length
+      song_col_reviews: Reviews
+      actions: Actions
       show_song: Show
       edit_song: Edit
       delete_song: Delete
       delete_confirm: Are you sure you want to delete this song?
-    index:
-      show_album: Show
-      edit_album: Edit
-      delete_album: Delete
-      new_album: New Album
+      no_songs: 'This album has no songs.'
+      new_song: New Song
+  #========================== songs controller =========================#
   songs:
+    #===================== song views and actions ==================# 
+    form:
+      save: Save
+    edit:
+      edit_title: Edit
+      show_song: Show
+      back: Back
+    new:
+      new_song: New Song
+      back: Back
     show:
-      add_review: Add Review
       edit_song: Edit Song
       back: Back
-      show_review: Show
+      ratings_title: Ratings
+      rating_col_reviewer: Reviewer
+      rating_col_rating: 'Rating (out of 5)'
+      rating_col_review: Review
+      actions: Actions
       edit_review: Edit
       delete_review: Delete
       delete_confirm: Are you sure you want to delete this review?
-      index:
-      show_song: Show
-      edit_song: Edit
-      delete_song: Delete
-      new_song: New Song
+      no_reviews: 'This song has no reviews.'
+      new_review: New Review
+      add_song: Add Song
+  #========================= reviews controller ========================#
   reviews:
-    show:
-      edit_review: Edit Review
+    #=================== reviews views and actions =================#
+    form:
+      save: Save
+    edit:
+      edit_title: Edit Review
+      show_review: Show
+      back: Back
+    new:
+      new_review: New Review
       back: Back

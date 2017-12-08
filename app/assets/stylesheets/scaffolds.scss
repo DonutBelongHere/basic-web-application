@@ -1,14 +1,21 @@
-$headercolor: #010c30;
+/*
+* Styles for elements on pages for scaffolds, including tables and buttons
+*/
+
+/* table styles */
 $headerfont: 'Bookman Old Style';
 $tableheadercolor: #2f3855;
 $tableheadertextcolor: #ffffff;
-$tablecontenttextcolor: #454b66;
 $eventablerowcolor: #c9cceb;
 $oddtablerowcolor: #acb8d7;
 $tablebordercolor: #d1e1ff;
 $tabletextcolor: #454b66;
+/* button styles */
 $buttoncolor: #9ca3db;
 $buttontextcolor: #ffffff;
+
+/* table styling
+--------------------------------------------------------------------*/
 body {
   table {
     width: 75%;
@@ -38,46 +45,28 @@ body {
     border-bottom: 1px solid $tablebordercolor;
     border-left: 1px solid $tablebordercolor;
     
-    a, a:visited {
+    a, a:visited, a:hover {
       text-decoration: none;
       color: $tabletextcolor;
-    }
-    a:hover {
-      font-weight: bold;
+      &:hover {
+        color: $buttontextcolor;
+      }
     }
   }
 }
 
-h1, h2, h3{
-  text-align: center;
-}
-
-p, ol, ul, td {
-  line-height: 18px;
-}
-
-pre {
-  background-color: #eee;
-  padding: 10px;
-  font-size: 11px;
-}
-
+/* pre-defined form styling and field error styling 
+--------------------------------------------------------------------*/
 div {
   &.field, &.actions {
     margin-bottom: 10px;
   }
 }
-
-#notice {
-  color: green;
-}
-
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
-
 #error_explanation {
   width: 450px;
   border: 2px solid red;
@@ -85,23 +74,6 @@ div {
   padding-bottom: 0;
   margin-bottom: 20px;
   background-color: #f0f0f0;
-
-  h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px;
-    margin-bottom: 0px;
-    background-color: #c00;
-    color: #fff;
-  }
-
-  ul li {
-    font-size: 12px;
-    list-style: square;
-  }
-
 }
 
 /* buttons 
@@ -110,10 +82,14 @@ div {
   margin: 0px auto;
   width: 13.6%;
 }
-#editbutton, #backbutton {
+#showcontrols {
+  margin: 0px auto;
+  width: 20.2%;
+}
+#editbutton, #backbutton, #newbutton {
   display: inline-block;
 }
-#button, #editbutton, #backbutton {
+#button, #editbutton, #backbutton, #newbutton {
     height: 30px;
     width: 100px;
     border-radius: 5px;
