@@ -43,7 +43,7 @@ en:
     edit:
       edit_title: Edit
       show_album: Show
-      back: Back
+      back: Albums
     index:
       albums_title: Albums
       album_col_title: Title
@@ -58,11 +58,11 @@ en:
       new_album: New Album
     new:
       new_album: New Album
-      back: Back
+      back: Albums
     show:
       released: 'Released:'
       edit_album: Edit Album
-      back: Back
+      back: Albums
       songs_title: Songs
       song_col_title: Title
       song_col_genre: Genre
@@ -83,13 +83,13 @@ en:
     edit:
       edit_title: Edit
       show_song: Show
-      back: Back
+      back: Album
     new:
       new_song: New Song
-      back: Back
+      back: Album
     show:
       edit_song: Edit Song
-      back: Back
+      back: Album
       ratings_title: Ratings
       rating_col_reviewer: Reviewer
       rating_col_rating: 'Rating (out of 5)'
@@ -109,7 +109,7 @@ en:
     edit:
       edit_title: Edit Review
       show_review: Show
-      back: Back
+      back: Song
     new:
       new_review: New Review
-      back: Back
+      back: Song

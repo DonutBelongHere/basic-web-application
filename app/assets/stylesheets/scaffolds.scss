@@ -105,6 +105,7 @@ div {
     a, a:visited{
         color: $buttontextcolor;
         text-decoration: none;
+        display: block;
     }
     &:active {
         position: relative;
