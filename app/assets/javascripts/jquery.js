@@ -35,6 +35,6 @@ $(document).on('turbolinks:load', function() {
    $( '#notice' ).dialog();
    $( '#alert' ).dialog();
    
-   //form validation so the user understands what is required for each field
+   //form validation using gem so the user understands what is required for each field
    $('#form').validate();
 });
