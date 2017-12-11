@@ -1,19 +1,20 @@
 .container
-  // form id for jQuery form validation
+  / form id for jQuery form validation
   = form_for @song, :html => {id: 'form'} do |f|
     .field
       = f.hidden_field :album_id, value: @song.album.id
     .field
       = f.label :song_title
-      // user will be notified that a title is required if title field empty
+      / user will be notified that a title is required if title field empty
       = f.text_field :song_title, :class => "required"
     .field
       = f.label :genre
       = f.text_field :genre
     .field
       = f.label :length
-      // user will be notified that a length is required if length field empty
-      // user will be notified that a length must be an integer if an integer is not input
-      = f.number_field :length, :class => "required digits"
+      / user will be notified that a length is required if length field empty
+      / user will be notified that a length must be an integer if an integer is not input
+      / user will be notified that a length must be positive if they input length < 1
+      = f.number_field :length, :class => "required digits", :min => 1
     .actions
       = f.submit t('.save')

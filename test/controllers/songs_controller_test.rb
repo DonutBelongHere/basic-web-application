@@ -9,6 +9,10 @@ class SongsControllerTest < ActionController::TestCase
   test "should get new" do
     get :new, album_id: @album
     assert_response :success
+    assert_select 'title', 'Music Library'
+    assert_select 'h1', 'New Song'
+    assert_select 'h4', @album.album_title
+    assert_template layout: 'application'
   end
 
   test "should create song" do
@@ -22,11 +26,16 @@ class SongsControllerTest < ActionController::TestCase
   test "should show song" do
     get :show, id: @song
     assert_response :success
+    assert_select 'title', 'Music Library'
+    assert_select 'h2', @song.song_title
+    assert_template layout: 'application'
   end
 
   test "should get edit" do
     get :edit, id: @song
     assert_response :success
+    assert_select 'title', 'Music Library'
+    assert_template layout: 'application'
   end
 
   test "should update song" do

@@ -1,21 +1,21 @@
 .container
-  // form id for jQuery form validation
+  / form id for jQuery form validation
   = form_for @review, :html => {id: 'form'} do |f|
     .field
       = f.hidden_field :song_id, value: @review.song.id
     .field
       = f.label :reviewer
-      // user will be notified that a reviewer is required if reviewer field empty
+      / user will be notified that a reviewer is required if reviewer field empty
       = f.text_field :reviewer, :class => "required"
     .field
       = f.label :rating
-      // user will be notified that a rating is required if rating field empty
-      // user will be notified that a rating must be an integer if an integer is not input
-      // user will be notified that a rating must be between 1 and 5 if an integer outside of the range is input
+      / user will be notified that a rating is required if rating field empty
+      / user will be notified that a rating must be an integer if an integer is not input
+      / user will be notified that a rating must be between 1 and 5 if an integer outside of the range is input
       = f.number_field :rating, :class => "required digits", :range => [1, 5]
     .field
       = f.label :review
-      // user will be notified that a review is required if review field empty
+      / user will be notified that a review is required if review field empty
       = f.text_area :review, :class => "required"
     .actions
       = f.submit t('.save')

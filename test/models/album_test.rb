@@ -28,4 +28,25 @@ class AlbumTest < ActiveSupport::TestCase
     album2.save
     refute album2.valid?
   end
+  test 'should not save empty album title' do
+    album = Album.new
+    album.album_artist = "Album Artist"
+    album.release_date = 2017-07-07
+    album.save
+    refute album.valid?
+  end
+  test 'should not save empty album artist' do
+    album = Album.new
+    album.album_title = "Album"
+    album.release_date = 2017-07-07
+    album.save
+    refute album.valid?
+  end
+  test 'should not save empty release date' do
+    album = Album.new
+    album.album_title = "Album"
+    album.album_artist = "Album Artist"
+    album.save
+    refute album.valid?
+  end
 end

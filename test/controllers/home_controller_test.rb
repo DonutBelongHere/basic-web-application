@@ -6,6 +6,7 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
     assert_select 'title', 'Music Library'
     assert_select 'h1', 'Music Library'
+    assert_select 'p', 'A music library system to keep track of your music collection!'
     assert_template layout: 'application'
   end
   

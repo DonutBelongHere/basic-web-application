@@ -9,6 +9,9 @@ class ReviewsControllerTest < ActionController::TestCase
   test "should get new" do
     get :new, song_id: @song
     assert_response :success
+    assert_select 'title', 'Music Library'
+    assert_select 'h1', 'New Review'
+    assert_template layout: 'application'
   end
 
   test "should create review" do
@@ -22,6 +25,9 @@ class ReviewsControllerTest < ActionController::TestCase
   test "should get edit" do
     get :edit, id: @review
     assert_response :success
+    assert_select 'title', 'Music Library'
+    assert_select 'h1', 'Edit Review'
+    assert_template layout: 'application'
   end
 
   test "should update review" do
