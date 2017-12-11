@@ -13,12 +13,13 @@ class ReviewsController < ApplicationController
 
   # POST /reviews
   # POST /reviews.json
+  # after creating a review, redirect to song the review is for as user does
+  # not have access to individual review views
   def create
     @review = @song.reviews.new(review_params)
-
     respond_to do |format|
       if @review.save
-        format.html { redirect_to @review.song, notice: 'Review was successfully created.' }
+        format.html { redirect_to @review.song, notice: t('.notice')}
         format.json { render :show, status: :created, location: @review }
       else
         format.html { render :new }
@@ -29,10 +30,12 @@ class ReviewsController < ApplicationController
 
   # PATCH/PUT /reviews/1
   # PATCH/PUT /reviews/1.json
+  # after updating a review, redirect to song the review is for as user does
+  # not have access to individual review views
   def update
     respond_to do |format|
       if @review.update(review_params)
-        format.html { redirect_to @review.song, notice: 'Review was successfully updated.' }
+        format.html { redirect_to @review.song, notice: t('.notice')}
         format.json { render :show, status: :ok, location: @review }
       else
         format.html { render :edit }
@@ -43,10 +46,12 @@ class ReviewsController < ApplicationController
 
   # DELETE /reviews/1
   # DELETE /reviews/1.json
+  # after deleting a review, redirect to song the review was for as user does
+  # not have access to index of songs
   def destroy
     @review.destroy
     respond_to do |format|
-      format.html { redirect_to @review.song, notice: 'Review was successfully destroyed.' }
+      format.html { redirect_to @review.song, notice: t('.notice')}
       format.json { head :no_content }
     end
   end

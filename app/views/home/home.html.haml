@@ -1,11 +1,13 @@
 .container
     %p= t('.welcome_msg')
 .container
+    / if there are albums, display the albums in an accordion
     - if !@albums.empty?
         #menu
             - @albums.each do |album|
                 %h3= album.album_title
                 %div
+                    / if the album has songs, display the songs in a table in the accordion element
                     - if !album.songs.empty?
                         #button
                             = link_to t('.show_album'), album
@@ -27,6 +29,8 @@
                                         %td= song.reviews.count
                                         %td= link_to t('.show'), song
                     - else
+                        / if the album has no songs, notify the user and explain how to add them
                         %p= t('.no_songs')
-    - else                    
+    - else    
+        / if there are no albums, notify the user and explain how to add them
         %p= t('.no_albums')

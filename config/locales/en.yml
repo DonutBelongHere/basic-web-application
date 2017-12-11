@@ -39,7 +39,6 @@ en:
       
   #========================= album controller ==========================#
   albums:
-    notice: Album was successfully created.
     #================== album views and actions ==================#
     form:
       save: Save
@@ -78,6 +77,12 @@ en:
       delete_confirm: Are you sure you want to delete this song?
       no_songs: 'This album has no songs.'
       new_song: New Song
+    create:
+      notice: Album was successfully created.
+    update:
+      notice: Album was successfully updated.
+    destroy:
+      notice: Album was successfully deleted.
   #========================== songs controller =========================#
   songs:
     #===================== song views and actions ==================# 
@@ -104,6 +109,12 @@ en:
       no_reviews: 'This song has no reviews.'
       new_review: New Review
       add_song: Add Song
+    create:
+      notice: Song was successfully created.
+    update:
+      notice: Song was successfully updated.
+    destroy:
+      notice: Song was successfully deleted.
   #========================= reviews controller ========================#
   reviews:
     #=================== reviews views and actions =================#
@@ -116,3 +127,9 @@ en:
     new:
       new_review: New Review
       back: Song
+    create:
+      notice: Review was successfully created.
+    update:
+      notice: Review was successfully updated.
+    destroy:
+      notice: Review was successfully deleted.

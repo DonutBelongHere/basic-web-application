@@ -16,6 +16,7 @@
   #backbutton
     = link_to t('.back'), @song.album
 .container
+  / if there are reviews for the song, display them in a table
   - if !@song.reviews.empty?
     %h3= t('.ratings_title')
     %table
@@ -34,6 +35,7 @@
           %td= link_to t('.edit_review'), edit_review_path(review)
           %td= link_to t('.delete_review'), review, :method => :delete, :data => { :confirm => t('.delete_confirm')}
   - else
+    / if there are no reviews for the song, notify the user
     %p= t('.no_reviews')
 %br
 #button

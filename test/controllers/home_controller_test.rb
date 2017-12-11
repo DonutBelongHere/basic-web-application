@@ -14,7 +14,7 @@ class HomeControllerTest < ActionController::TestCase
     assert_response :success
     assert_select 'title', 'Music Library'
     assert_select 'h3', 'Contact Us'
-    assert_select 'p', 'Please fill out the form to get in touch.'
+    assert_select 'p', 'If you have any queries, please fill out the form below to get in touch.'
     assert_template layout: 'application'
   end
   

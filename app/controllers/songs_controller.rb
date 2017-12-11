@@ -23,7 +23,7 @@ class SongsController < ApplicationController
 
     respond_to do |format|
       if @song.save
-        format.html { redirect_to @song, notice: 'Song was successfully created.' }
+        format.html { redirect_to @song, notice: t('.notice') }
         format.json { render :show, status: :created, location: @song }
       else
         format.html { render :new }
@@ -37,7 +37,7 @@ class SongsController < ApplicationController
   def update
     respond_to do |format|
       if @song.update(song_params)
-        format.html { redirect_to @song, notice: 'Song was successfully updated.' }
+        format.html { redirect_to @song, notice: t('.notice') }
         format.json { render :show, status: :ok, location: @song }
       else
         format.html { render :edit }
@@ -48,10 +48,12 @@ class SongsController < ApplicationController
 
   # DELETE /songs/1
   # DELETE /songs/1.json
+  # after deleting a song, redirect to album the song was for as user does
+  # not have access to the index of songs
   def destroy
     @song.destroy
     respond_to do |format|
-      format.html { redirect_to @song.album, notice: 'Song was successfully destroyed.' }
+      format.html { redirect_to @song.album, notice: t('.notice') }
       format.json { head :no_content }
     end
   end

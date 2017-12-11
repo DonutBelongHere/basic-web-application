@@ -1,6 +1,7 @@
 .container
   %h2= t('.albums_title')
 .container
+  / if there are albums, display them in a table
   - if !@albums.empty?
     %table
       %thead
@@ -20,6 +21,7 @@
             %td= link_to t('.edit_album'), edit_album_path(album)
             %td= link_to t('.delete_album'), album, method: :delete, data: { confirm: t('.delete_confirm') }
   - else
+    / if there are no albums, notify the user and explain how to add them
     %p= t('.no_albums')
 %br
 #button

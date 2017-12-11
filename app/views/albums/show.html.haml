@@ -13,6 +13,7 @@
     = link_to t('.back'), albums_path
 
 .container
+  / if there are songs in the album, display them in a table
   - if !@album.songs.empty?
     %h3= t('.songs_title')
     %table
@@ -34,6 +35,7 @@
           %td= link_to t('.edit_song'), edit_song_path(song)
           %td= link_to t('.delete_song'), song, :method => :delete, :data => { :confirm => t('.delete_confirm')}
   - else
+    / if there are no songs in the album, notify the user
     %p= t('.no_songs')
 %br
 #button
